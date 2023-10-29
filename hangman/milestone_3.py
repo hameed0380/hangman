@@ -1,10 +1,6 @@
 import random
 
-
-word_list = ["apple", "banana", "orange", "pear", "pineapple"]
-word = random.choice(word_list)
-
-
+# function will take the guessed letter as an argument and check if the letter is in the word
 def check_guess(guess):
     guess = guess.lower()
     if guess in word:
@@ -12,6 +8,7 @@ def check_guess(guess):
     else:
         print(f"Sorry, {guess} is not in the word. Try again.")
 
+# Iteratively check if the input is a valid guess
 def ask_for_input():
     while True:
         guess = input("Please enter a letter: ")
@@ -22,5 +19,9 @@ def ask_for_input():
 
     check_guess(guess)
 
+
+
+word_list = ["apple", "banana", "orange", "pear", "pineapple"]
+word = random.choice(word_list)
 
 ask_for_input()
